@@ -1,20 +1,26 @@
 # React GitHub Pages Deploy Template
 
 1. Create an empty repository.
-2. Create a new branch "development".
+2. Create a new branch "development" and set it as Default branch.
 3. Create a new React App.
 
    ```sh
    npm create vite@latest -- --template react-gh-pages-deploy-template
    ```
 
-4. Install **gh-pages** as a development dependency.
+4. Add "base" to **vite.config.ts**:
+
+   ```json
+   base: "",
+   ```
+
+5. Install **gh-pages** as a development dependency.
 
    ```sh
    npm install gh-pages --save-dev
    ```
 
-5. Edit **package.json**
+6. Edit **package.json**
 
    - Add "homepage" property:
 
@@ -31,7 +37,7 @@
      }
      ```
 
-6. Add a "remote" that points to the GitHub repository (???).
+7. Add a "remote" that points to the GitHub repository (???).
 
    ```sh
    git remote add origin https://github.com/{**USERNAME**}/react-gh-pages-deploy-template.git
@@ -39,7 +45,7 @@
 
    ??? error: remote origin already exists.
 
-7. Add
+8. Add
 
 ---
 
